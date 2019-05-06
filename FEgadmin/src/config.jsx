@@ -1,6 +1,7 @@
 
 var axios = require('axios');
 
+// Accessing API of glgBackend
 var axiosInstance = axios.create({
     baseURL: (process.env.NODE_ENV !== 'production') ? 'http://localhost:3000/api/v1' : '',
     timeout: 72000,
