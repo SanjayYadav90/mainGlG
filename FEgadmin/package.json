@@ -1,0 +1,46 @@
+{
+  "name": "gadmin",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://www.gwalg.com/backend/v1/api",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-datepicker": "^1.8.0",
+    "datatables": "^1.10.18",
+    "jquery": "^3.4.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-dom": "^16.8.6",
+    "react-moment": "^0.9.2",
+    "react-perfect-scrollbar": "^1.5.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.0.0",
+    "skycons": "^1.0.0"
+  },
+  "scripts": {
+    "start": "PORT=3500 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint:js": "eslint ./src ./webpack ./*.js -f table --ext .js --ext .jsx",
+    "lint:scss": "stylelint ./src/**/*.scss --syntax scss"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
