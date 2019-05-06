@@ -1,0 +1,541 @@
+{
+	"id": "d9869c3c-9794-47cb-b108-a74355d4366f",
+	"name": "GlGAdmin",
+	"description": null,
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [],
+	"folders_order": [
+		"03fafb29-0989-4895-990f-ca44b9779e4a",
+		"44b70425-c279-4792-b57e-37726d1defaf",
+		"0d2195c8-6d63-4d74-bbb8-bfafca1efe1b"
+	],
+	"folders": [
+		{
+			"id": "03fafb29-0989-4895-990f-ca44b9779e4a",
+			"name": "Auth",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"collection": "d9869c3c-9794-47cb-b108-a74355d4366f",
+			"folder": null,
+			"order": [
+				"971828c4-569d-486b-ac81-850a2a87c160",
+				"4b70e17b-a65b-4e36-959c-683aec637bc9"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"name": "Categories",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "d9869c3c-9794-47cb-b108-a74355d4366f",
+			"folder": null,
+			"order": [
+				"d1f942de-02cd-4ed7-956d-e29d0a404fd1",
+				"4e88e439-0151-4cc8-86d3-9c1ec86746bb",
+				"768d5b35-d619-40b5-abee-76f092522153",
+				"09d0a84a-b47d-4fa6-bee0-ba36e86cd3ed",
+				"9e71a40b-816a-4367-a703-253088e65abc"
+			],
+			"folders_order": []
+		},
+		{
+			"id": "44b70425-c279-4792-b57e-37726d1defaf",
+			"name": "Users",
+			"description": "",
+			"auth": null,
+			"events": null,
+			"collection": "d9869c3c-9794-47cb-b108-a74355d4366f",
+			"folder": null,
+			"order": [
+				"0e320659-609a-4983-8685-3c0ed8ddd3c1",
+				"8aa9a8b3-c52c-4c0d-bd02-b048bc70468f",
+				"c1e4c500-ba51-4c5a-a6aa-aeb908ade4ce",
+				"fabb838b-d976-4b5e-b4ce-fdb20f8384bd"
+			],
+			"folders_order": []
+		}
+	],
+	"requests": [
+		{
+			"id": "09d0a84a-b47d-4fa6-bee0-ba36e86cd3ed",
+			"name": "Update",
+			"url": "{{path}}/categories/3",
+			"description": "",
+			"data": [
+				{
+					"key": "category[title]",
+					"value": "Milk1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[description]",
+					"value": "This is third category update",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[cream_level]",
+					"value": "Mid",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[status]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"headers": "access_token: {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "0e320659-609a-4983-8685-3c0ed8ddd3c1",
+			"name": "Show",
+			"url": "{{path}}/users/one_user",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": [],
+			"folder": "44b70425-c279-4792-b57e-37726d1defaf",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "4b70e17b-a65b-4e36-959c-683aec637bc9",
+			"name": "auth/login",
+			"url": "{{path}}/auth/login",
+			"description": "",
+			"data": [
+				{
+					"key": "email",
+					"value": "dev@data.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "Secur5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": null,
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "03fafb29-0989-4895-990f-ca44b9779e4a",
+			"pathVariables": {}
+		},
+		{
+			"id": "4e88e439-0151-4cc8-86d3-9c1ec86746bb",
+			"name": "List",
+			"url": "{{path}}/categories",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"headers": "access_token: {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "768d5b35-d619-40b5-abee-76f092522153",
+			"name": "View",
+			"url": "{{path}}/categories/1",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"headers": "access_token: {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "8aa9a8b3-c52c-4c0d-bd02-b048bc70468f",
+			"name": "List",
+			"url": "{{path}}/users",
+			"description": "",
+			"data": [],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				}
+			],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "44b70425-c279-4792-b57e-37726d1defaf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"headers": "//Authorization: \n",
+			"pathVariables": {}
+		},
+		{
+			"id": "971828c4-569d-486b-ac81-850a2a87c160",
+			"name": "register_user",
+			"url": "{{path}}/users",
+			"description": "",
+			"data": [
+				{
+					"key": "user[salutation]",
+					"value": "Mr.",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[fullname]",
+					"value": "third user",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[username]",
+					"value": "three_user",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[gender]",
+					"value": "femal",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[mobile]",
+					"value": "9874521652",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[email]",
+					"value": "dev3@data.com",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[password]",
+					"value": "Secur@1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[confirm_password]",
+					"value": "Secur@1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "user[primary_address]",
+					"value": "second address",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": null,
+			"folder": "03fafb29-0989-4895-990f-ca44b9779e4a",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "9e71a40b-816a-4367-a703-253088e65abc",
+			"name": "Delete",
+			"url": "{{path}}/categories/4",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": null,
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"pathVariables": {}
+		},
+		{
+			"id": "c1e4c500-ba51-4c5a-a6aa-aeb908ade4ce",
+			"name": "Delete",
+			"url": "{{path}}/users/second_user",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "DELETE",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": [],
+			"folder": "44b70425-c279-4792-b57e-37726d1defaf",
+			"headers": "",
+			"pathVariables": {}
+		},
+		{
+			"id": "d1f942de-02cd-4ed7-956d-e29d0a404fd1",
+			"name": "Create",
+			"url": "{{path}}/categories",
+			"description": "",
+			"data": [
+				{
+					"key": "user_id",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": false
+				},
+				{
+					"key": "category[title]",
+					"value": "Fresh milk no",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[description]",
+					"value": "This is a new category",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[cream_level]",
+					"value": "Full",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "category[status]",
+					"value": "1",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [
+				{
+					"key": "access_token",
+					"value": "{{access_token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"method": "POST",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "0d2195c8-6d63-4d74-bbb8-bfafca1efe1b",
+			"headers": "access_token: {{access_token}}\n",
+			"pathVariables": {}
+		},
+		{
+			"id": "fabb838b-d976-4b5e-b4ce-fdb20f8384bd",
+			"name": "Update",
+			"url": "{{path}}/users/one_user",
+			"description": "",
+			"data": [
+				{
+					"key": "salutation",
+					"value": "Mr",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "fullname",
+					"value": "First User",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "gender",
+					"value": "Male",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "mobile",
+					"value": "9874521651",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "primary_address",
+					"value": "second address update",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"headerData": [],
+			"method": "PATCH",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}"
+					}
+				]
+			},
+			"events": null,
+			"folder": "44b70425-c279-4792-b57e-37726d1defaf",
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
