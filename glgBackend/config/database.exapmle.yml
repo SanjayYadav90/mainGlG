@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  username: root
+  password: postgres
+  pool: 5
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: glgBackend_dev
+
+test:
+  <<: *default
+  database: glgBackend_test
+
+production:
+  <<: *default
+  database: glgBackend_prod
+  username: glgBackend
+  password: <%= ENV['GLGBACKEND_DATABASE_PASSWORD'] %>

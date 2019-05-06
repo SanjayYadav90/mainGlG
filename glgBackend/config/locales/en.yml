@@ -1,0 +1,9 @@
+en:
+  user:
+    labels:
+      email: "User Name"
+      password: "Email Address"
+  category:
+    title: "User Name"
+    description: "Email Address"
+
