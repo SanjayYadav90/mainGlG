@@ -41,12 +41,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <SideNav/>
-        <div className="page-container">
+        <body>
           <Header />
-          <Routing/>
-        </div>
-        <Footer/>
+          
+          {/* <SideNav/> */}
+            <Routing/>
+          <Footer/>
+        </body>
       </Router>
     );
   }
